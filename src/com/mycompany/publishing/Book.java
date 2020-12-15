@@ -57,10 +57,11 @@ public class Book {
     }
 
     public String getAuthorNames() {
-        String authorName ="";
-        for (int i= 0; i<authors.length; i++){
-            authorName += authors[i].getName() + " ";
+        StringBuilder stringBuilder = new StringBuilder(authors[0].getName());
+        System.out.println(authors.length);
+        for (int i= 1; i < authors.length; i++){
+            stringBuilder.append(", " + authors[i].getName());
         }
-        return authorName;
+        return stringBuilder.toString();
     }
 }
