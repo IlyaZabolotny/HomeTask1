@@ -31,15 +31,15 @@ public class Container {
     }
 
     public boolean collides(Ball ball) {
-        boolean isCallide = false;
+        boolean isCollide = false;
         if ((x1 <= ball.getX() - ball.getRadius()) &&
                 (ball.getRadius() + ball.getX() <= x2)) {
             if ((y1 <= ball.getY() - ball.getRadius()) &&
                     (ball.getY() + ball.getRadius() <= y2)) {
-                isCallide = true;
+                isCollide = true;
             }
         }
-        return isCallide;
+        return isCollide;
     }
 
     @Override
