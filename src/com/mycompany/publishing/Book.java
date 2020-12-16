@@ -59,7 +59,7 @@ public class Book {
     public String getAuthorNames() {
         StringBuilder stringBuilder = new StringBuilder(authors[0].getName());
         System.out.println(authors.length);
-        for (int i= 1; i < authors.length; i++){
+        for (int i= 1; i < authors.length; i++) {
             stringBuilder.append(", " + authors[i].getName());
         }
         return stringBuilder.toString();
