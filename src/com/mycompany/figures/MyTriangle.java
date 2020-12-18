@@ -51,9 +51,6 @@ public class MyTriangle {
             triangleType = TriangleType.ISOSCELES;
         }
 
-        if ( equalEdges12 == 0 && equalEdges13==0 && equalEdges23 == 0){
-            triangleType = TriangleType.EQUILATERAL;
-        }
         return triangleType;
     }
 
