@@ -1,5 +1,7 @@
 package com.mycompany.figures;
 
+import java.util.Objects;
+
 import static java.lang.Math.*;
 
 public class MyPoint {
@@ -40,6 +42,20 @@ public class MyPoint {
     public void setXY(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyPoint myPoint = (MyPoint) o;
+        return x == myPoint.x &&
+                y == myPoint.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 
     @Override
